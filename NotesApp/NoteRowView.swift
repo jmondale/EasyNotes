@@ -16,7 +16,7 @@ struct NoteRowView: View {
                 Text(note.title)
                     .font(.headline)
                     .foregroundColor(.primary)
-                Text(note.content)
+                Text(note.summary ?? note.content)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .lineLimit(2)

@@ -1,0 +1,6 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+
+# API Keys — never commit
+NotesApp/Secrets.swift

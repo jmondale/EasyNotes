@@ -19,6 +19,25 @@ class NoteData: ObservableObject {
     func add(note: Note) {
         notes.append(note)
         save()
+        generateSummary(for: note)
+    }
+
+    func generateSummary(for note: Note) {
+        let trimmedContent = note.content.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedContent.isEmpty else { return }
+        Task {
+            do {
+                let summary = try await ClaudeService.summarize(title: note.title, content: trimmedContent)
+                await MainActor.run {
+                    if let index = self.notes.firstIndex(where: { $0.id == note.id }) {
+                        self.notes[index].summary = summary
+                        self.save()
+                    }
+                }
+            } catch {
+                print("EasyNotes: Failed to generate summary: \(error)")
+            }
+        }
     }
 
     func remove(atOffsets offsets: IndexSet) {

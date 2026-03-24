@@ -39,13 +39,13 @@ struct ContentView: View {
                     TextField("Title", text: $newNoteTitle)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
-                        .background(Color.white)
+                        .background(Color(.secondarySystemBackground))
                         .cornerRadius(10)
                         .shadow(radius: 5)
 
                     TextEditor(text: $newNoteContent)
                         .padding()
-                        .background(Color.white)
+                        .background(Color(.secondarySystemBackground))
                         .cornerRadius(10)
                         .shadow(radius: 5)
 
@@ -57,12 +57,12 @@ struct ContentView: View {
                         showingAddNote = false
                     }
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.accentColor)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                 }
                 .padding()
-                .background(Color(.systemGray6))
+                .background(Color(.systemGroupedBackground))
                 .cornerRadius(15)
                 .shadow(radius: 10)
             }

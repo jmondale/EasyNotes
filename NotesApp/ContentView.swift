@@ -17,7 +17,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(noteData.notes) { note in
-                    NavigationLink(destination: EditNoteView(note: note, noteData: noteData)) {
+                    NavigationLink(destination: EditNoteView(note: note)) {
                         NoteRowView(note: note)
                     }
                 }
@@ -67,6 +67,7 @@ struct ContentView: View {
                 .shadow(radius: 10)
             }
         }
+        .environmentObject(noteData)
     }
 }
 

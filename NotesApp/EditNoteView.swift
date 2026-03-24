@@ -9,8 +9,8 @@ import SwiftUI
 
 struct EditNoteView: View {
     @State var note: Note
-    @ObservedObject var noteData: NoteData
-    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var noteData: NoteData
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         VStack {
@@ -25,7 +25,7 @@ struct EditNoteView: View {
                     noteData.notes[index] = note
                     noteData.save()
                 }
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
             .padding()
         }

@@ -15,6 +15,10 @@
 		E44AFA9F2C77E85700AC77B7 /* NoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AFA9E2C77E85700AC77B7 /* NoteData.swift */; };
 		E44AFAA12C77E98C00AC77B7 /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AFAA02C77E98C00AC77B7 /* EditNoteView.swift */; };
 		E44AFAA32C77F65F00AC77B7 /* NoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AFAA22C77F65F00AC77B7 /* NoteRowView.swift */; };
+		E486CC802C781394003A073E /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486CC7F2C781394003A073E /* NotesApp.swift */; };
+		E486CC822C781394003A073E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E486CC812C781394003A073E /* ContentView.swift */; };
+		E486CC842C781395003A073E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E486CC832C781395003A073E /* Assets.xcassets */; };
+		E486CC872C781395003A073E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E486CC862C781395003A073E /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +31,22 @@
 		E44AFA9E2C77E85700AC77B7 /* NoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteData.swift; sourceTree = "<group>"; };
 		E44AFAA02C77E98C00AC77B7 /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
 		E44AFAA22C77F65F00AC77B7 /* NoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRowView.swift; sourceTree = "<group>"; };
+		E486CC7D2C781394003A073E /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E486CC7F2C781394003A073E /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
+		E486CC812C781394003A073E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E486CC832C781395003A073E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E486CC862C781395003A073E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E44AFA882C77DEE500AC77B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E486CC7A2C781394003A073E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				E44AFA8D2C77DEE500AC77B7 /* NotesApp */,
+				E486CC7E2C781394003A073E /* Notes */,
 				E44AFA8C2C77DEE500AC77B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				E44AFA8B2C77DEE500AC77B7 /* NotesApp.app */,
+				E486CC7D2C781394003A073E /* Notes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +97,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E486CC7E2C781394003A073E /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				E486CC7F2C781394003A073E /* NotesApp.swift */,
+				E486CC812C781394003A073E /* ContentView.swift */,
+				E486CC832C781395003A073E /* Assets.xcassets */,
+				E486CC852C781395003A073E /* Preview Content */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		E486CC852C781395003A073E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E486CC862C781395003A073E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +136,23 @@
 			productReference = E44AFA8B2C77DEE500AC77B7 /* NotesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E486CC7C2C781394003A073E /* Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E486CC8A2C781395003A073E /* Build configuration list for PBXNativeTarget "Notes" */;
+			buildPhases = (
+				E486CC792C781394003A073E /* Sources */,
+				E486CC7A2C781394003A073E /* Frameworks */,
+				E486CC7B2C781394003A073E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Notes;
+			productName = Notes;
+			productReference = E486CC7D2C781394003A073E /* Notes.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,11 +160,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					E44AFA8A2C77DEE500AC77B7 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					E486CC7C2C781394003A073E = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -128,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				E44AFA8A2C77DEE500AC77B7 /* NotesApp */,
+				E486CC7C2C781394003A073E /* Notes */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +197,15 @@
 			files = (
 				E44AFA962C77DEEC00AC77B7 /* Preview Assets.xcassets in Resources */,
 				E44AFA932C77DEEC00AC77B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E486CC7B2C781394003A073E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E486CC872C781395003A073E /* Preview Assets.xcassets in Resources */,
+				E486CC842C781395003A073E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +222,15 @@
 				E44AFAA32C77F65F00AC77B7 /* NoteRowView.swift in Sources */,
 				E44AFAA12C77E98C00AC77B7 /* EditNoteView.swift in Sources */,
 				E44AFA9D2C77E83800AC77B7 /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E486CC792C781394003A073E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E486CC822C781394003A073E /* ContentView.swift in Sources */,
+				E486CC802C781394003A073E /* NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +414,66 @@
 			};
 			name = Release;
 		};
+		E486CC882C781395003A073E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Notes/Preview Content\"";
+				DEVELOPMENT_TEAM = K4RQKPMFWC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.5m.Notes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E486CC892C781395003A073E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Notes/Preview Content\"";
+				DEVELOPMENT_TEAM = K4RQKPMFWC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.5m.Notes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +491,15 @@
 			buildConfigurations = (
 				E44AFA9A2C77DEEC00AC77B7 /* Debug */,
 				E44AFA9B2C77DEEC00AC77B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E486CC8A2C781395003A073E /* Build configuration list for PBXNativeTarget "Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E486CC882C781395003A073E /* Debug */,
+				E486CC892C781395003A073E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

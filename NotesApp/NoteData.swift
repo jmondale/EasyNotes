@@ -27,26 +27,32 @@ class NoteData: ObservableObject {
     }
 
     func save() {
-        let encoder = JSONEncoder()
-        if let data = try? encoder.encode(notes) {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(notes)
             let url = getDocumentsDirectory().appendingPathComponent(filename)
-            try? data.write(to: url)
+            try data.write(to: url)
+        } catch {
+            print("EasyNotes: Failed to save notes: \(error)")
         }
     }
 
     private func load() {
         let url = getDocumentsDirectory().appendingPathComponent(filename)
-        if let data = try? Data(contentsOf: url) {
-            let decoder = JSONDecoder()
-            if let loadedNotes = try? decoder.decode([Note].self, from: data) {
-                notes = loadedNotes
-            }
+        guard FileManager.default.fileExists(atPath: url.path) else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            notes = try JSONDecoder().decode([Note].self, from: data)
+        } catch {
+            print("EasyNotes: Failed to load notes: \(error)")
         }
     }
 
     private func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
+        guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            fatalError("EasyNotes: Documents directory unavailable")
+        }
+        return url
     }
 }
 

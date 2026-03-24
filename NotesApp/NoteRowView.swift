@@ -26,6 +26,7 @@ struct NoteRowView: View {
         .background(Color(.systemGray6))
         .cornerRadius(8)
         .shadow(radius: 2)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(note.title). \(note.content)")
     }
 }
-

@@ -19,6 +19,21 @@ class NoteData: ObservableObject {
     func add(note: Note) {
         notes.append(note)
         save()
+        generateSummary(for: note)
+    }
+
+    func generateSummary(for note: Note) {
+        let trimmed = note.content.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        Task.detached(priority: .background) {
+            let summary = NLSummaryService.summarize(content: trimmed)
+            await MainActor.run {
+                if let index = self.notes.firstIndex(where: { $0.id == note.id }) {
+                    self.notes[index].summary = summary
+                    self.save()
+                }
+            }
+        }
     }
 
     func remove(atOffsets offsets: IndexSet) {

@@ -18,7 +18,7 @@ struct EditNoteView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             TextEditor(text: $note.content)
-                .border(Color.gray, width: 1)
+                .border(Color(.separator), width: 1)
                 .padding()
             Button("Save") {
                 if let index = noteData.notes.firstIndex(where: { $0.id == note.id }) {

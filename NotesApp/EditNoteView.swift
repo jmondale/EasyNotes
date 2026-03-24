@@ -42,7 +42,6 @@ struct EditNoteView: View {
                 if let index = noteData.notes.firstIndex(where: { $0.id == note.id }) {
                     noteData.notes[index] = note
                     noteData.save()
-                    noteData.generateSummary(for: note)
                 }
                 dismiss()
             }
